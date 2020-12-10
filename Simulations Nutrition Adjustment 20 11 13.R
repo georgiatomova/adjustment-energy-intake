@@ -1,3 +1,4 @@
+# Load required packages
 library(progress); library(devtools); library(dagitty)
 #install_github("jtextor/dagitty/r") #update dagitty to latest version if required
 options(scipen=999) 
