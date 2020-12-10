@@ -1,5 +1,3 @@
-rm(list=ls())
-#setwd("~/University of Leeds/Peter Tennant - Leeds causal inference group/Research/Projects and papers/Nutrition Adjustment")
 library(progress); library(devtools); library(dagitty)
 #install_github("jtextor/dagitty/r") #update dagitty to latest version if required
 options(scipen=999) 
