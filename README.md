@@ -13,10 +13,10 @@ There has been considerable debate as to which is most appropriate, but there do
 ostensibly similar in purpose, might actually estimate very different effects.  
   
 This study uses simulations to demonstrate the causal effect estimands that are associated with each model, and explores the performance of these models in reducing confounding by common causes of diet. We also explore an alternative model, that we call 'the all-components model', 
-and compare its performance to the the appraoches that are currently most commonly used in practice.   
+and compare its performance to the performance of the approaches that are currently most commonly used in practice.   
 
 ## 2. Data and setup  
-All data are simulated as part of this study. Once simulated, all variables are re-scaled so that their mean and standard deviation values are plausible, to aid illustration. Values used for re-scaling have been informed by the [NDNS Data Year 7-8](https://www.gov.uk/government/statistics/ndns-results-from-years-7-and-8-combined), 
+All data used in this study are simulated, and the code for data simulation is included. Once simulated, all variables are re-scaled so that their mean and standard deviation values are plausible, to aid illustration. Values used for re-scaling have been informed by the [NDNS Data Year 7-8](https://www.gov.uk/government/statistics/ndns-results-from-years-7-and-8-combined), 
 a summary of which is available in the NDNS_yr_7_to_8_statistics.xlsx file.  
 
 All analyses were conducted using R version 4.0.3.  
@@ -44,20 +44,15 @@ The following variables are calculated, as opposed to simulated:
 * total energy intake - the sum of energy from all nutrients, *including* the exposure  
 * residual energy intake - the sum of energy from all nutrients, *excluding* the exposure  
 
-The simulation then involves the following steps:   
-1. Re-scale of all variables based on plausible mean and standard deviation values  
-2. Calculate total and residual energy intake from the simulated nutrients  
-3. Run the different models that adjust for energy intake:   
-  3.0. The unadjusted model  
-  3.1. The energy partition model  
-  3.2. The standard model  
-  3.3. The nutrient density model, and the multivariable nutrient density model  
-  3.4. The residual model  
-  3.5. The alternative 'all-components' model  
-4. Save exposure coefficient estimates from each model and store in a vector  
+The following models for energy intake adjustment are then run:    
+  0. The unadjusted model  
+  1. The energy partition model  
+  2. The standard model  
+  3. The nutrient density model, and the multivariable nutrient density model  
+  4. The residual model  
+  5. The alternative 'all-components' model  
 
-
-Finally, the point estimate and the corresponding 95% simulation intervals of each model are extracted and saved as the primary study results.  
+Exposure coefficient estimates from each model are stored in a vector, the point estimate and the corresponding 95% simulation intervals of each model are extracted and saved as the primary study results.  
 
 ## 4. Sensitivity analyses  
 
@@ -66,5 +61,5 @@ In the original study simulations, an apparent 'information loss' was observed, 
 We hypothesised that this is a result of combining variables, that all have distinct effects on the outcome, into one. Therefore, if we simulate all nutrients to have the same effects on the outcome, then we expect the estimates to be unbiased in the absence of confounding.
 
 The following simulations explore scenarios in which either:  
-   (1) all nutrients, including the exposure, have the same effects on the outcome;  
-or (2) all nutrients, excluding the exposure, have the same effects on the outcome.  
+(1) all nutrients, including the exposure, have the same effects on the outcome; or  
+(2) all nutrients, excluding the exposure, have the same effects on the outcome.  
