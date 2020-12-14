@@ -17,7 +17,7 @@ and compare its performance to the performance of the approaches that are curren
 
 ## 2. Data and setup  
 All data used in this study are simulated, and the code for data simulation is included. Once simulated, all variables are re-scaled so that their mean and standard deviation values are plausible, to aid illustration. Values used for re-scaling have been informed by the [NDNS Data Year 7-8](https://www.gov.uk/government/statistics/ndns-results-from-years-7-and-8-combined), 
-a summary of which is available in the NDNS_yr_7_to_8_statistics.xlsx file.  
+a summary of which is available in the [NDNS_yr_7_to_8_statistics.xlsx](NDNS_yr_7_to_8_statistics.xlsx) file.  
 
 All analyses were conducted using R version 4.0.3.  
 
@@ -35,7 +35,12 @@ options(scipen=999)
 
 ## 3. Simulation  
 
-Two datasets are simulated - with and without the presence of confounding by common causes of diet (i.e. determinants of dietary intake), but otherwise identical. The simulated variables are:  
+The main simulation is contained in the file [simulations_nutrition_adjustment_20_11_13.R](simulations_nutrition_adjustment_20_11_13.R).  
+
+Two datasets are simulated - with and without the presence of confounding by common causes of diet (i.e. determinants of dietary intake), but otherwise identical. The specific path coefficients have been chosen to correspond to specific causal effects after re-scaling of
+the variables. The file [path_coefficient_spreadsheet.xlsx](path_coefficient_spreadsheet.xlsx) contains the formula used.  
+
+The simulated variables are:  
 * non-milk extrinsic sugars (NMES) - **the exposure**  
 * carbohydrates (CRB)  
 * fibre (FBR)  
@@ -66,6 +71,6 @@ In the original study simulations, an apparent 'information loss' was observed, 
 
 We hypothesised that this is a result of combining variables, that all have distinct effects on the outcome, into one. Therefore, if we simulate all nutrients to have the same effects on the outcome, then we expect the estimates to be unbiased in the absence of confounding.
 
-The following simulations explore scenarios in which either:  
+The simulations in [simulations_information_loss_20_12_10.R](simulations_information_loss_20_12_10.R) explore scenarios in which either:  
 (1) all nutrients, including the exposure, have the same effects on the outcome; or  
 (2) all nutrients, excluding the exposure, have the same effects on the outcome.  
