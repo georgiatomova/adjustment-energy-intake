@@ -28,6 +28,11 @@ install_github("jtextor/dagitty/r")
 install.packages("progress")
 ```  
 
+You might also prefer to remove scientific notation:  
+```
+options(scipen=999)  
+```  
+
 ## 3. Simulation  
 
 Two datasets are simulated - with and without the presence of confounding by common causes of diet (i.e. determinants of dietary intake), but otherwise identical. The simulated variables are:  
@@ -44,7 +49,8 @@ The following variables are calculated, as opposed to simulated:
 * total energy intake - the sum of energy from all nutrients, *including* the exposure  
 * residual energy intake - the sum of energy from all nutrients, *excluding* the exposure  
 
-The following models for energy intake adjustment are then run:    
+The following models for energy intake adjustment are then run:  
+  
   0. The unadjusted model  
   1. The energy partition model  
   2. The standard model  
