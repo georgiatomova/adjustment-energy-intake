@@ -52,7 +52,7 @@ The simulated variables are:
 
 The following variables are calculated, as opposed to simulated:  
 * total energy intake - the sum of energy from all nutrients, *including* the exposure  
-* residual energy intake - the sum of energy from all nutrients, *excluding* the exposure  
+* remaining energy intake - the sum of energy from all nutrients, *excluding* the exposure  
 
 The following models for energy intake adjustment are then run:  
   
