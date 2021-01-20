@@ -35,7 +35,7 @@ options(scipen=999)
 
 ## 3. Simulation  
 
-The main simulation is contained in the file [simulations_nutrition_adjustment_20_11_13.R](simulations_nutrition_adjustment_20_11_13.R).  
+The main simulation is contained in the file [simulations_nutrition_adjustment_21_01_20.R](simulations_nutrition_adjustment_21_01_20.R).  
 
 Two datasets are simulated - with and without the presence of confounding by common causes of diet (i.e. determinants of dietary intake), but otherwise identical. The specific path coefficients have been chosen to correspond to specific causal effects after re-scaling of
 the variables. The file [path_coefficient_spreadsheet.xlsx](path_coefficient_spreadsheet.xlsx) contains the formula used.  
@@ -71,6 +71,6 @@ In the original study simulations, an apparent 'information loss' was observed, 
 
 We hypothesised that this is a result of combining variables, that all have distinct effects on the outcome, into one. Therefore, if we simulate all nutrients to have the same effects on the outcome, then we expect the estimates to be unbiased in the absence of confounding.
 
-The simulations in [simulations_information_loss_20_12_10.R](simulations_information_loss_20_12_10.R) explore scenarios in which either:  
+The simulations in [simulations_information_loss_21_01_20.R](simulations_information_loss_21_01_20.R) explore scenarios in which either:  
 (1) all nutrients, including the exposure, have the same effects on the outcome; or  
 (2) all nutrients, excluding the exposure, have the same effects on the outcome.  
