@@ -48,7 +48,7 @@ The simulated variables are:
 * saturated fat (SF)  
 * protein (PRO)  
 * alcohol (ALC)  
-* body weight (WT) - **the outcome**  
+* fasting plasma glucose concentration (GLUC) - **the outcome**  
 
 The following variables are calculated, as opposed to simulated:  
 * total energy intake - the sum of energy from all nutrients, *including* the exposure  
