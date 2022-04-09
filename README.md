@@ -5,6 +5,7 @@
 2. Data and setup
 3. Simulation
 4. Sensitivity analyses 
+5. Measurement error
 
 ## 1. Introduction
 
@@ -35,7 +36,7 @@ options(scipen=999)
 
 ## 3. Simulation  
 
-The main simulation is contained in the file [simulations_nutrition_adjustment_21_01_20.R](simulations_nutrition_adjustment_21_01_20.R).  
+The main simulation is contained in the file [simulations_nutrition_adjustment_Gluc_210517.R](simulations_nutrition_adjustment_Gluc_210517.R).  
 
 Two datasets are simulated - with and without the presence of confounding by common causes of diet (i.e. determinants of dietary intake), but otherwise identical. The specific path coefficients have been chosen to correspond to specific causal effects after re-scaling of
 the variables. The file [path_coefficient_spreadsheet.xlsx](path_coefficient_spreadsheet.xlsx) contains the formula used.  
@@ -74,3 +75,7 @@ We hypothesised that this is a result of combining variables, that all have dist
 The simulations in [simulations_information_loss_21_01_20.R](simulations_information_loss_21_01_20.R) explore scenarios in which either:  
 (1) all nutrients, including the exposure, have the same effects on the outcome; or  
 (2) all nutrients, excluding the exposure, have the same effects on the outcome.  
+
+## 5. Measurement eror
+
+The simulation contained in [simulations_nutrition_adjustment_measurement_error_220409.R](simulations_nutrition_adjustment_measurement_error_220409.R) explores the original scenarios and models with measurement error included.
